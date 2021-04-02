@@ -1,0 +1,30 @@
+* {
+    scrollbar-width: thin;
+}
+
+body {
+    background: rgba(var(--d87, 255, 255, 255), 1);
+    overflow-y: scroll;
+}
+
+#main-container {
+    max-width: 99.3rem;
+    display: flex;
+    margin-top: 3rem;
+}
+
+#banner-container,
+#form-container {
+    flex: 1 1 0;
+    width: 50%;
+}
+
+#banner-container {
+    height: 62rem;
+    background-color: #eee;
+    background: url("../../image/home-phones.png") no-repeat center;
+}
+
+#form-container {
+    text-align: center;
+}
