@@ -85,3 +85,61 @@
         &:hover
             border: transparent
             box-shadow: 0 .1rem 1rem #ccc
+
+.jobs__container
+    padding: 3rem
+    background: $secondary-bg
+    h2
+        @extend %section-title
+    .jobs__list
+        padding: 2rem 0
+        display: flex
+        &_first
+            width: 30%
+            height: 42rem
+            margin: 0 2%
+            position: relative
+            background-image: url("../image/job1.jpg")
+            cursor: pointer
+            transition: .5s
+            @extend %center-bg
+            @extend %card-hover
+        &_others
+            width: 68%
+            display: flex
+            flex-wrap: wrap
+            .job__card
+                width: 46%
+                height: 20rem
+                margin-bottom: 1.5rem
+                margin-right: 1.5rem
+                position: relative
+                cursor: pointer
+                @extend %center-bg
+                @extend %card-hover
+            #job1
+                background-image: url('../image/job2.jpg')
+            #job2
+                background-image: url('../image/job3.jpg')
+            #job3
+                background-image: url('../image/job4.jpg')
+            #job4
+                background-image: url('../image/job5.jpg')
+        .job__card-cover
+            width: 100%
+            height: 100%
+            padding-top: 2rem
+            border: .3rem solid $primary-color
+            position: absolute
+            top: 0
+            left: 0
+            background-color: rgba(0, 0,0,0.6)
+        .job__card-title, .job__card-description
+            color: $light-color
+            text-align: center
+        .job__card-title
+            font-size: 2.2em
+            transition: .5s
+        .job__card-description
+            padding: 1rem
+            font-size: .9em

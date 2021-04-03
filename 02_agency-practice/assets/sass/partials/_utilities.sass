@@ -73,6 +73,17 @@
     font-size: 3em
     text-align: center
 
+%center-bg
+    background-size: cover
+    background-position: center
+
+%card-hover
+    .job__card-title, .job__card-cover, .job__card-description
+        opacity: 0
+    &:hover
+        .job__card-title, .job__card-cover, .job__card-description
+            opacity: 1
+
 .btn
     padding: 1rem 1.6rem
     border: 1px solid $light-color
