@@ -143,3 +143,37 @@
         .job__card-description
             padding: 1rem
             font-size: .9em
+.footer
+    padding: 5rem 2rem
+    background-color: $footer-bg
+    color: $text-color
+    &__container
+        max-width: 120rem
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        &_desc, &_links
+            width: 50%
+        &_desc
+            p
+                width: 80%
+        &_links
+            display: flex
+            justify-content: space-between
+            &-list
+                padding: 0 1rem
+                li
+                    margin-bottom: .5rem
+                    a
+                        color: $text-color
+                        transition: .5s
+                        &:hover
+                            color: $light-color
+        &_copyright
+            width: 100%
+            margin-top: 3rem
+            text-align: center
+    &__title
+        margin-bottom: 1rem
+        font-weight: 700
+        color: $light-color
