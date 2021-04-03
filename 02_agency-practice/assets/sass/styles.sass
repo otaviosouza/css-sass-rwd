@@ -1,16 +1,53 @@
-// -- import Normalize --
-@import ../../../assets/css/modules/normalize.css
+@import partials/vendors
+@import partials/variables
+@import partials/utilities
 
-@import ../../../assets/sass/init
+@include reset
+@include typography
 
-// -- import Google Fonts --
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap")
-
-// -- import vendors --
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css")
-
-body
-    font-family: 'Lato', sans-serif
-
-h1
-    color: red
+.header
+    height: 85vh
+    background: linear-gradient(rgba(0,0,0, .6), rgba(0,0,0, .6)), url('../image/office.jpg') no-repeat center
+    background-size: cover
+    &__container
+        z-index: 1
+        width: 100%
+        padding: 1.5rem 2rem
+        display: flex
+        justify-content: space-between
+        position: fixed
+        top: 0
+        left: 0
+        background-color: $black
+        .logo__link
+            font-size: 2em
+            color: $light-color
+            @include main-hover
+    &__nav_navbar
+        height: 100%
+        display: flex
+        align-items: center
+        li
+            margin: .5rem 1rem
+            a
+                color: $light-color
+                @include main-hover
+    .fas.fa-bars
+        display: none
+        font-size: 2em
+        color: $light-color
+    .title__container
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        color: $light-color
+        h2
+            font-size: 3em
+            @extend %title-text-shadow
+        h1
+            margin:
+                top: .1rem
+            font-size: 4em
+            @extend %title-text-shadow
