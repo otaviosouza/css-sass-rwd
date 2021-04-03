@@ -64,6 +64,16 @@
     &:hover
         color: $primary-color
 
+@mixin mobile
+    @media screen and   ( max-width: 425px )
+        @content
+
+@mixin card-mobile
+    width: 100%
+    height: 20rem
+    margin: 0
+    margin-bottom: 2rem
+
 %title-text-shadow
     text-shadow: .3rem .2rem $black
 
@@ -80,6 +90,9 @@
 %card-hover
     .job__card-title, .job__card-cover, .job__card-description
         opacity: 0
+        @include mobile
+            opacity: 1
+
     &:hover
         .job__card-title, .job__card-cover, .job__card-description
             opacity: 1
