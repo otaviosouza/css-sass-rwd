@@ -1,0 +1,31 @@
+@mixin center-content
+    max-width: var(--container-width)
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+
+@mixin actions-icon
+    margin-left: 2.5rem
+    position: relative
+    display: flex
+    flex-direction: column
+    text-align: center
+    .qty
+        width: 2.4rem
+        height: 2.4rem
+        position: absolute
+        transform: translate(5rem, -1rem)
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        background-color: var(--primary-color)
+        font-size: .875em
+    i
+        margin-bottom: .2rem
+
+@mixin rounded-input
+    height: 4rem
+    padding-left: 2rem
+    border-top-left-radius: 2rem
+    border-bottom-left-radius: 2.5rem

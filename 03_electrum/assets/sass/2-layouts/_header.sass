@@ -1,0 +1,58 @@
+@use '../1-base/base-mixins'
+@use './layouts-mixins'
+
+.header
+    background-color: var(--bg-color)
+    &__top
+        background-color: var(--secondary-bg-color)
+        color: var(--light-color)
+        &_container
+            padding: .8rem 0
+            @include layouts-mixins.center-content
+            span
+                margin-right: 1rem
+            i
+                margin-right: .3rem
+    &__main
+        &_container
+            padding: 1.2rem 0
+            @include layouts-mixins.center-content
+            a, span, i
+                color: var(--light-color)
+            .brand
+                font-size: 3em
+                font-weight: 900
+                i
+                    color: var(--primary-color)
+            .form__search
+                width: 45%
+                display: flex
+                align-items: center
+                justify-content: center
+                .input
+                    height: 4rem
+                    &__search
+                        width: 60%
+                        @include layouts-mixins.rounded-input
+            .user
+                &__actions
+                    display: flex
+                    align-items: center
+                &__wishlist_container, &__cart_container
+                    @include layouts-mixins.actions-icon
+    &__bottom
+        background-color: var(--light-color)
+        border-top: .3rem solid var(--primary-color)
+        border-bottom: .2rem solid var(--section-bg-color)
+        ul
+            padding: 1rem 0
+            @include layouts-mixins.center-content
+            justify-content: left
+            li
+                margin-right: 1.2rem
+                a
+                    border-bottom: .2rem solid transparent
+                    color: var(--link-color)
+                    &:hover
+                        border-color: var(--primary-color)
+                        color: var(--primary-color)

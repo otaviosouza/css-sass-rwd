@@ -1,0 +1,44 @@
+@use '../1-base/base-mixins'
+@use './modules-mixins'
+
+.banner
+    width: 30%
+    height: 20rem
+    position: relative
+    color: var(--light-color)
+    transition: .4s
+    @include modules-mixins.center-bg
+    background-size: 100%
+    &:hover
+        background-size: 120%
+    &_cover
+        width: 70%
+        height: 100%
+        border-bottom-right-radius: 6rem
+        background-color: var(--primary-color)
+        opacity: .8
+    &_content
+        padding: 2rem
+        position: absolute
+        top: 0
+        left: 0
+        h2
+            max-width: 70%
+            margin-bottom: 1rem
+            font-size: 2em
+        a
+            display: flex
+            align-items: center
+            font-size: 1.5em
+            font-weight: 700
+            color: var(--light-color)
+        i
+            margin-left: .8rem
+            color: var(--light-color)
+
+#banner-1
+    background-image: url('../image/banner-1.jpg')
+#banner-2
+    background-image: url('../image/banner-2.jpg')
+#banner-3
+    background-image: url('../image/banner-3.jpg')
