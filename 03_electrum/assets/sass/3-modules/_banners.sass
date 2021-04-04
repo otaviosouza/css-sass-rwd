@@ -2,13 +2,16 @@
 @use './modules-mixins'
 
 .banner
+    @include modules-mixins.center-bg
     width: 30%
     height: 20rem
     position: relative
     color: var(--light-color)
     transition: .4s
-    @include modules-mixins.center-bg
     background-size: 100%
+    @include base-mixins.mobile
+        width: 90%
+        margin: 1rem
     &:hover
         background-size: 120%
     &_cover
@@ -26,12 +29,17 @@
             max-width: 70%
             margin-bottom: 1rem
             font-size: 2em
+            @include base-mixins.mobile
+                max-width: 80%
+                font-size: 1.5em
         a
             display: flex
             align-items: center
             font-size: 1.5em
             font-weight: 700
             color: var(--light-color)
+            @include base-mixins.mobile
+                font-size: initial
         i
             margin-left: .8rem
             color: var(--light-color)

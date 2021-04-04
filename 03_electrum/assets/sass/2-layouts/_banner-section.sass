@@ -2,5 +2,8 @@
 @use './layouts-mixins'
 
 .banners
-    padding: 3rem 0
     @include layouts-mixins.center-content
+    padding: 3rem 0
+    @include base-mixins.mobile
+        flex-direction: column
+        align-items: center

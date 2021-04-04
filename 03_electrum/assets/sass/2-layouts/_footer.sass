@@ -4,6 +4,8 @@
 .footer
     padding: 3rem 0
     background: var(--bg-color)
+    @include base-mixins.mobile
+        padding: 3rem
     a, p
         color: var(--gray-text-color)
     li, p
@@ -21,8 +23,14 @@
     &__top
         @include layouts-mixins.center-content
         padding-bottom: 3rem
+        @include base-mixins.mobile
+            flex-direction: column
+
         &_about, &_categories, &_info, &_menu
             max-width: 25%
+            @include base-mixins.mobile
+                max-width: 100%
+                margin-bottom: 1rem
     &__bottom
         @include layouts-mixins.center-content
         flex-direction: column

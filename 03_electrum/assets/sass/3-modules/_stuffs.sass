@@ -11,6 +11,10 @@
     position: relative
     transition: .4s
     cursor: pointer
+    @include base-mixins.mobile
+        width: 90%
+        margin: 1rem
+
     &:hover
         border-color: var(--primary-color)
 

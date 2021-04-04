@@ -7,15 +7,26 @@
         padding: 2rem
         background: var(--section-bg-color) url('../image/deal_headset.png') no-repeat 95% 2rem
         background-size: 25%
+        @include base-mixins.mobile
+            height: 70rem
+            background-size: 70%
+            background-position-y: 130%
+            background-position-x: 120%
         &_content
             @include layouts-mixins.center-content
             height: 100%
             flex-direction: column
             align-items: center
             justify-content: center
+            @include base-mixins.mobile
+                text-align: center
             &-timer
                 margin-bottom: 2rem
                 display: flex
+                @include base-mixins.mobile
+                    flex-wrap: wrap
+                    align-self: center
+                    justify-content: center
             &-title, &-subtitle
                 margin-bottom: 1rem
                 font-size: 2em
@@ -24,8 +35,8 @@
                 margin-bottom: 2rem
                 font-size: 1.5em
         &_timer
-            width: 10rem
-            height: 10rem
+            width: 12rem
+            height: 12rem
             margin: 0 1rem
             border-radius: 50%
             display: flex
@@ -34,6 +45,8 @@
             justify-content: center
             background: var(--primary-color)
             color: var(--light-color)
+            @include base-mixins.mobile
+                margin-bottom: 1.5rem
             &-time
                 font-size: 1.5em
                 font-weight: 700

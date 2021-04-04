@@ -6,17 +6,24 @@
     &__top
         background-color: var(--secondary-bg-color)
         color: var(--light-color)
+        @include base-mixins.mobile
+            display: none
         &_container
-            padding: .8rem 0
             @include layouts-mixins.center-content
+            padding: .8rem 0
+
             span
                 margin-right: 1rem
             i
                 margin-right: .3rem
     &__main
         &_container
-            padding: 1.2rem 0
             @include layouts-mixins.center-content
+            padding: 1.2rem 0
+            @include base-mixins.mobile
+                flex-direction: column
+                align-items: center
+
             a, span, i
                 color: var(--light-color)
             .brand
@@ -29,25 +36,34 @@
                 display: flex
                 align-items: center
                 justify-content: center
+                @include base-mixins.mobile
+                    width: 100%
+                    margin: 2rem 0
+
                 .input
                     height: 4rem
                     &__search
-                        width: 60%
                         @include layouts-mixins.rounded-input
+                        width: 60%
             .user
                 &__actions
                     display: flex
                     align-items: center
                 &__wishlist_container, &__cart_container
                     @include layouts-mixins.actions-icon
+                    @include base-mixins.mobile
+                        margin: 1rem
+
     &__bottom
         background-color: var(--light-color)
         border-top: .3rem solid var(--primary-color)
         border-bottom: .2rem solid var(--section-bg-color)
         ul
-            padding: 1rem 0
             @include layouts-mixins.center-content
+            padding: 1rem 0
             justify-content: left
+            @include base-mixins.mobile
+                display: none
             li
                 margin-right: 1.2rem
                 a

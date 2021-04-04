@@ -8,6 +8,8 @@
     flex-direction: column
     align-items: center
     justify-content: center
+    @include base-mixins.mobile
+        text-align: center
     h2
         margin-bottom: 2rem
         font-size: 2em
@@ -18,9 +20,13 @@
     form
         margin-bottom: 3rem
         display: flex
+        @include base-mixins.mobile
+            width: 100%
         input[type="email"]
             @include layouts-mixins.rounded-input
             border: .1rem solid var(--section-bg-color)
+            @include base-mixins.mobile
+                width: 100%
     .social-media
         i
             padding: 1.2rem
