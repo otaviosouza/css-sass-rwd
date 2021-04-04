@@ -1,0 +1,14 @@
+@use '../1-base/base-mixins'
+@use './layouts-mixins'
+
+.stuffs__grid
+    @include layouts-mixins.center-content
+    padding: 2rem 0
+    flex-direction: column
+    h2
+        font-size: 2em
+        text-transform: uppercase
+    &_container
+        padding: 2rem 0
+        display: flex
+        justify-content: space-between

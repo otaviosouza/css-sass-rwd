@@ -1,0 +1,40 @@
+@use '../1-base/base-mixins'
+@use './layouts-mixins'
+
+.footer
+    padding: 3rem 0
+    background: var(--bg-color)
+    a, p
+        color: var(--gray-text-color)
+    li, p
+        margin-bottom: 1rem
+        a
+            &:hover
+                color: var(--primary-color)
+    i
+        margin-right: .3rem
+    h3
+        margin-bottom: 1.5rem
+        font-size: 1.75em
+        text-transform: uppercase
+        color: var(--light-color)
+    &__top
+        @include layouts-mixins.center-content
+        padding-bottom: 3rem
+        &_about, &_categories, &_info, &_menu
+            max-width: 25%
+    &__bottom
+        @include layouts-mixins.center-content
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        &_payments
+            margin-bottom: 2rem
+            i
+                margin: .5rem
+                font-size: 3rem
+                color: var(--dark-color)
+                transition: .4s
+                cursor: pointer
+                &:hover
+                    color: var(--primary-color)
